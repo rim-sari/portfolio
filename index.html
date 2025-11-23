@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Rim</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Police Google (optionnel) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">Rim<span>.</span></div>
+    <nav class="nav">
+        <a href="#hero">Accueil</a>
+        <a href="#about">Profil</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero section reveal">
+    <div class="hero-text">
+        <p class="hero-subtitle">Bienvenue dans mon Portfolio</p>
+        <h1>Salut, moi c'est Rim </h1>
+        <p class="hero-desc">
+            Étudiante en informatique, passionnée par le développement web, les applications et les programmes
+            qui résolvent des problèmes concrets.
+        </p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn primary">Voir mes projets</a>
+            <a href="#about" class="btn secondary">En savoir plus</a>
+        </div>
+    </div>
+
+    <div class="hero-photo">
+        <div class="photo-border">
+            <img src="images/photo id.jpg" alt="Photo de Rim">
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about section reveal">
+    <h2>Profil</h2>
+    <div class="about-content">
+        <p>
+            Je suis <strong>Rim</strong>, étudiante en informatique.
+            J’aime concevoir des sites web, des applications et des programmes
+            qui sont à la fois <strong>clairs, utiles et bien structurés</strong>.
+            <br><br>
+            Je travaille sur des projets académiques (projets de cours, travaux pratiques)
+            et sur des projets personnels (sites, scripts, outils) afin de progresser chaque jour.
+            <br><br>
+            Mon objectif : devenir une développeuse capable de mener un projet
+            de A à Z, du concept à la mise en production.
+        </p>
+        <br>
+        <div class="hero-buttons">
+            <a href="cv.pdf" download class="btn primary download-btn">
+                <img src="images/download.svg" alt="Télécharger" class="icon-download">
+                Télécharger CV
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Me contacter
+            </a>
+        </div>
+    </div>
+    
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills section reveal">
+    <h2>Compétences</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, bases de Vue/React, responsive design, UX simple.</p>
+        </div>
+        <div class="skill-card">
+            <h3>Backend</h3>
+            <p>Node.js, Express, APIs REST, TypeScript (bases), gestion de routes et CRUD.</p>
+        </div>
+        <div class="skill-card">
+            <h3>Programmation</h3>
+            <p>C, Python, scripts, petits programmes pour automatiser des tâches.</p>
+        </div>
+        <div class="skill-card">
+            <h3>Outils & Méthodes</h3>
+            <p>Git/GitHub, VS Code, travail en équipe, organisation de projet.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects section reveal">
+    <h2>Mes projets</h2>
+
+    <!-- Filtres -->
+    <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="academic">Académiques</button>
+        <button class="filter-btn" data-filter="personal">Personnels</button>
+    </div>
+
+    <!-- Grille de projets -->
+    <div class="projects-grid">
+
+        <!-- Exemple projet académique -->
+        <article class="project-card" data-type="personal">
+            <div class="project-thumb"></div>
+            <div class="project-content">
+                <span class="project-tag personal">Projet personnel</span>
+                <h3>Site de révision PSC1</h3>
+                <p>
+                    Site web pédagogique avec fiches synthétiques et quiz interactif
+                    pour réviser le PSC1 (HTML, CSS, JavaScript).
+                </p>
+                <div class="project-meta">
+                    <span>Web – Frontend</span>
+                    <span>HTML / CSS / JS</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://rim-sari.github.io/PSC1-site/" target="_blank">Voir le site</a>
+                    <a href="https://github.com/rim-sari/PSC1-site" target="_blank">Voir le code</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Exemple projet académique (site de jeux) -->
+        <article class="project-card" data-type="academic">
+            <div class="project-thumb"></div>
+            <div class="project-content">
+                <span class="project-tag academic">Projet académique</span>
+                <h3>Mini site de jeux</h3>
+                <p>
+                    Regroupement de petits jeux (tic-tac-toe, snake, ping-pong) pour
+                    pratiquer la logique en JavaScript.
+                </p>
+                <div class="project-meta">
+                    <span>Web – Frontend</span>
+                    <span>JS / Canvas</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://rim-sari.github.io/tp-game-app/" target="_blank">Voir le site</a>
+                    <a href="https://github.com/rim-sari/tp-game-app" target="_blank">Voir le code</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Exemple projet backend -->
+        <article class="project-card" data-type="academic">
+            <div class="project-thumb"></div>
+            <div class="project-content">
+                <span class="project-tag academic">Projet académique</span>
+                <h3>API REST Node.js</h3>
+                <p>
+                    API pour gérer des utilisateurs avec Express, TypeScript et SQLite/SQL :
+                    endpoints CRUD, validation simple et tests via Postman.
+                </p>
+                <div class="project-meta">
+                    <span>Backend – API</span>
+                    <span>Node / Express</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/rim-sari/td-api-express-typescript" target="_blank">Voir le code</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Exemple projet personnel (programmes Python) -->
+        <article class="project-card" data-type="personal">
+            <div class="project-thumb"></div>
+            <div class="project-content">
+                <span class="project-tag personal">Projet personnel</span>
+                <h3>Mini Music Player</h3>
+                <p>
+                    Collection de scripts Python : petits outils de calcul, gestion de fichiers,
+                    automatisation simple de tâches répétitives.
+                </p>
+                <div class="project-meta">
+                    <span>Programmation</span>
+                    <span>Python</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Voir le repo</a>
+                </div>
+            </div>
+        </article>
+
+         <article class="project-card" data-type="academic">
+            <div class="project-thumb"></div>
+            <div class="project-content">
+                <span class="project-tag academic">Projet académique</span>
+                <h3>Site de recettes</h3>
+                <p>
+                    Collection de scripts Python : petits outils de calcul, gestion de fichiers,
+                    automatisation simple de tâches répétitives.
+                </p>
+                <div class="project-meta">
+                    <span>Programmation</span>
+                    <span>Python</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Voir le repo</a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+
+        <div class="contact-text">
+            <h2>Restons en contact</h2>
+            <p>Disponible pour de nouveaux projets et collaborations</p>
+        </div>
+
+        <div class="contact-icons">
+            <a href="https://github.com/rim-sari" target="_blank" class="c-icon">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+
+            <a href="https://www.linkedin.com/in/rim-sari/" target="_blank" class="c-icon">
+                <img src="images/linkedin-02.svg" alt="LinkedIn">
+            </a>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sari.rim.pro@gmail.com" target="_blank" class="c-icon">
+                <img src="images/mail.svg" alt="Email">
+            </a>
+        </div>
+
+    </div>
+
+    <hr class="contact-divider">
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© <span id="year"></span> – Portfolio SARI Rim</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
